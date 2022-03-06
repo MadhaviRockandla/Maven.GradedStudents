@@ -14,7 +14,7 @@ public class Classroom {
     }
 
     public Classroom() {
-        students = new Student[30];
+        students = new Student[10];
     }
 
     public Student[] getStudents() {
@@ -25,10 +25,10 @@ public class Classroom {
 
         int count = 0;
         Double sum = 0.0;
-        for (int i = 0; i < students.length; i++) {
-            if(students[i] != null) {
+        for (Student student : students) {
+            if (student != null) {
                 count++;
-                sum += students[i].getAverageExamScore();
+                sum += student.getAverageExamScore();
             }
         }
         return sum / count;
@@ -54,7 +54,7 @@ public class Classroom {
                 if( students[i].getFirstName().equals(firstName) && students[i].getLastName().equals(lastName)) {
                     students[i] = null;
                     removed = true;
-                    System.out.println("hi");
+                    System.out.println("Hi Students");
                 }
             }
         }

@@ -39,11 +39,11 @@ public class Student implements Comparable<Student> {
     }
 
     public String getExamScores() {
-        String output = "Exam Scores:\n";
+        StringBuilder output = new StringBuilder("Exam Scores:\n");
         for (int i = 0; i < examScores.size(); i++) {
-            output += "\tExam " + (i + 1) + " -> " + examScores.get(i) + "\n";
+            output.append("\tExam ").append(i + 1).append(" -> ").append(examScores.get(i)).append("\n");
         }
-        return output;
+        return output.toString();
     }
 
     public Integer getNumberOfExamsTaken() {
@@ -73,7 +73,7 @@ public class Student implements Comparable<Student> {
         } else if (this.getAverageExamScore() < o.getAverageExamScore()) {
             return -1;
         } else {
-            return (this.firstName + this.lastName).compareTo(o.firstName + o.lastName);
+            return (this.firstName + o.lastName).compareTo(o.firstName + o.lastName);
         }
     }
 }
