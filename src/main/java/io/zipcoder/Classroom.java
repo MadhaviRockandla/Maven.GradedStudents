@@ -72,7 +72,7 @@ public class Classroom {
         gradeBook.put("B", new ArrayList<>());
         gradeBook.put("C", new ArrayList<>());
         gradeBook.put("D", new ArrayList<>());
-        gradeBook.put("F", new ArrayList<>());
+        gradeBook.put("E", new ArrayList<>());
 
         Student[] sortedStudents = this.getStudentsByScore();
 
@@ -89,7 +89,7 @@ public class Classroom {
                 } else if (percentile > .1) {
                     gradeBook.get("D").add(sortedStudents[i]);
                 } else {
-                    gradeBook.get("F").add(sortedStudents[i]);
+                    gradeBook.get("E").add(sortedStudents[i]);
                 }
             }
         }
